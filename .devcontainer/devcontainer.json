@@ -1,0 +1,40 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node-mongo
+{
+	"name": "Name",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+    // Only use this if not using docker-compose.
+	// "workspaceMount": "source=app-src,target=/workspaces,type=volume",
+	// "workspaceFolder": "/workspaces",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    // Rename the container - legacy method.
+	// "runArgs": ["--name", "App"], // not supported anymore
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"ms-azuretools.vscode-docker"
+			]
+		}
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [3000, 27017],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "yarn install",
+
+    // Obviously, this runs as whatever user from the container - node here, replace if needed.
+    // Fixes permission issues and allows VSCode to find the repo folder.
+	"postAttachCommand": "cd /workspaces/ && sudo chown -R node /workspaces/* && git clone {GIT REPO LINK HERE}"
+
+    // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
