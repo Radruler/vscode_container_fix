@@ -33,7 +33,7 @@
 
     // Obviously, this runs as whatever user from the container - node here, replace if needed.
     // Fixes permission issues and allows VSCode to find the repo folder.
-	"postAttachCommand": "cd /workspaces/ && sudo chown -R node /workspaces/* && git clone {GIT REPO LINK HERE}",
+	"postAttachCommand": "cd /workspaces/ && sudo chown -R node /workspaces/* && git clone https://github.com/Radruler/vscode_container_fix",
 
     // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
