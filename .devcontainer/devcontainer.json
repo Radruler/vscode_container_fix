@@ -1,9 +1,9 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node-mongo
 {
-	"name": "Name",
+	"name": "DevContainerTemplate",
 	"dockerComposeFile": "docker-compose.yml",
-	"service": "app",
+	"service": "devcontainer",
     // Only use this if not using docker-compose.
 	// "workspaceMount": "source=app-src,target=/workspaces,type=volume",
 	// "workspaceFolder": "/workspaces",
@@ -33,8 +33,10 @@
 
     // Obviously, this runs as whatever user from the container - node here, replace if needed.
     // Fixes permission issues and allows VSCode to find the repo folder.
-	"postAttachCommand": "cd /workspaces/ && sudo chown -R node /workspaces/* && git clone {GIT REPO LINK HERE}"
+	"postAttachCommand": "cd /workspaces/ && sudo chown -R node /workspaces/* && git clone {GIT REPO LINK HERE}",
 
     // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
+
+	"containerEnv": { "MY_VARIABLE": "${localEnv:MY_VARIABLE}" }
 }

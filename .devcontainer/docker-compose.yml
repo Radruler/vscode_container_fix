@@ -1,7 +1,7 @@
-version: '3.8'
+name: Devcontainer_Template
 
 services:
-  app:
+  devcontainer:
     build: 
       context: .
       dockerfile: Dockerfile
@@ -17,10 +17,10 @@ services:
     # Use "forwardPorts" in **devcontainer.json** to forward an app port locally. 
     # (Adding the "ports" property to this file will not forward from a Codespace.)
 
-  initialize-app:
+  initialize-devcontainer:
     image: alpine:latest
     depends_on:
-      - app
+      - devcontainer
     # We need to make the folder that VSCode will try to navigate to.
     # Without this, VSCode can get stuck trying to initialize the workspace.
     entrypoint: >
