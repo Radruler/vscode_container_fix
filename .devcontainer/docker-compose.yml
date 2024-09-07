@@ -20,6 +20,7 @@ services:
 
   initialize-devcontainer:
     image: alpine:latest
+    container_name: init
     depends_on:
       - devcontainer
     # We need to make the folder that VSCode will try to navigate to.
