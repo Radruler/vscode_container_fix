@@ -1,0 +1,6 @@
+name: project-in-devcontainer
+
+volumes:
+  src:
+    external: true
+    name: src_real
