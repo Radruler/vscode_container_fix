@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node-mongo
 {
-	"name": "devcontainer",
+	"name": "devcontainer_json",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "devcontainer",
     // Only use this if not using docker-compose.
