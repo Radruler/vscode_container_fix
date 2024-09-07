@@ -1,4 +1,4 @@
-name: devcontainer
+name: devcontainer_template
 
 services:
   devcontainer:
