@@ -38,6 +38,7 @@
     // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 
-	"containerEnv": { "MY_VARIABLE": "${localEnv:MY_VARIABLE}" },
-	"mounts": [{ "source": "src2", "target": "/workspaces/test", "type": "volume" }]
+	"containerEnv": { "MY_VARIABLE": "${localEnv:MY_VARIABLE}" }
+	// We don't need this - we accomplish it in the compose file.
+	// "mounts": [{ "source": "src2", "target": "/workspaces/test", "type": "volume" }]
 }

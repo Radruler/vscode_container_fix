@@ -36,3 +36,4 @@ services:
 
 volumes:
   src:
+    name: src_real
