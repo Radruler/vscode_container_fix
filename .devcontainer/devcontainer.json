@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node-mongo
 {
-	"name": "DevContainerTemplate",
+	"name": "devcontainer",
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "devcontainer",
     // Only use this if not using docker-compose.
@@ -38,6 +38,6 @@
     // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 
-	"containerEnv": { "MY_VARIABLE": "${localEnv:MY_VARIABLE}" },
+	"containerEnv": { "MY_VARIABLE": "${localEnv:MY_VARIABLE}" }
 	// "mounts": [{ "source": "src", "target": "/workspaces", "type": "volume" }]
 }

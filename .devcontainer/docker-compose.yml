@@ -1,8 +1,8 @@
-name: Devcontainer_Template_ComposeName
+name: devcontainer
 
 services:
   devcontainer:
-    container_name: Devcontainer_Template_ContainerName
+    container_name: devcontainer
     build: 
       context: .
       dockerfile: Dockerfile
