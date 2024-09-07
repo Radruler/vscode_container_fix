@@ -1,5 +1,20 @@
 name: project-in-devcontainer
 
+services:
+  test:
+    build: ./
+    ports:
+      - "3000:3000"
+    volumes:
+      - type: volume
+        source: src
+        target: /app_example
+        volume:
+          subpath: vscode_container_fix/
+      # - ./frontend:/app
+    command: echo "it works!"
+    network_mode: host
+
 volumes:
   src:
     external: true
